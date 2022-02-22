@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 596.0, 117.0, 638.0, 378.0 ],
+		"rect" : [ 675.0, 84.0, 570.0, 553.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,30 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 42.5, 55.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 42.5, 104.0, 69.0, 22.0 ],
+					"text" : "metro 2000"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 1,
 					"id" : "obj-24",
 					"maxclass" : "comment",
@@ -58,22 +82,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 11.5, 55.0, 30.0, 20.0 ],
+					"patching_rect" : [ 11.5, 145.071428571428555, 30.0, 20.0 ],
 					"text" : "<b>",
 					"textcolor" : [ 0.870588, 0.415686, 0.062745, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 2,
-					"id" : "obj-23",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 68.5, 55.0, 199.0, 20.0 ],
-					"text" : "<= bang to hear your beautiful note!",
-					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
 				}
 
 			}
@@ -126,7 +137,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 144.5, 89.571428571428569, 156.0, 48.0 ],
+					"patching_rect" : [ 167.5, 86.071428571428569, 156.0, 48.0 ],
 					"text" : "<= Lock patch (cmd. + E), double-click the rtcmix~ object to open & see script.",
 					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
 				}
@@ -141,7 +152,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 11.5, 9.0, 605.0, 29.0 ],
-					"text" : "1. \"Hello World!\" — A Single Note with the STRUM2 Instrument"
+					"text" : "2.4 Repeated, continuous execution via external control"
 				}
 
 			}
@@ -153,7 +164,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 144.5, 151.5, 156.0, 75.0 ],
+					"patching_rect" : [ 189.5, 138.5, 156.0, 75.0 ],
 					"text" : "Unlock patch (cmd. + E), then option-click on the rtcmix~ object for documentation (i.e. to see its .maxhelp file).",
 					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
 				}
@@ -169,7 +180,7 @@
 					"orientation" : 1,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 42.5, 238.0, 136.0, 47.0 ],
+					"patching_rect" : [ 42.5, 264.0, 136.0, 47.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_linknames" : 1,
@@ -227,7 +238,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 42.5, 55.0, 24.0, 24.0 ]
+					"patching_rect" : [ 42.5, 145.071428571428555, 24.0, 24.0 ]
 				}
 
 			}
@@ -247,17 +258,24 @@
 					"fontsize" : 28.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 42.5, 89.571428571428569, 100.0, 41.0 ],
-					"save" : [ "#N", "rtcmix~", 1, 0, ";", "#X", "restore", 0, 193, 193, "// STRUM2 Instrument Syntax:\r\n// STRUM2(outsk, dur, AMP, PITCH, squish, decay_time[, PAN])\n// source: http://rtcmix.org/reference/instruments/STRUM2.php\r\n\r\nSTRUM2(0, 3.5, 20000, 443.9, 2, 3.5)\n", ";" ],
-					"text" : "rtcmix~"
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "signal", "" ],
+					"patching_rect" : [ 42.5, 195.571428571428555, 123.0, 41.0 ],
+					"save" : [ "#N", "rtcmix~", 2, 0, ";", "#X", "restore", 0, 306, 306, " //source: http://rtcmix.org/reference/instruments/STRUM2.php\r\n//STRUM2(outsk, dur, AMP, PITCH, squish, decay_time[, PAN])\r\n//STRUM2 Instrument Syntax:\r\n\r\nstarttime=0\r\n\r\nfor (i=0; i<20; i=i+1){\r\n\tdillon= irand(300,700)\r\n\tSTRUM2(starttime, 3.5, 15000, dillon, 2, 3.5, random())\r\n\tstarttime=starttime+ 0.1\r\n}", ";" ],
+					"text" : "rtcmix~ 2"
 				}
 
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 1 ],
+					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-1", 0 ]
@@ -267,16 +285,21 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 1 ],
-					"order" : 0,
-					"source" : [ "obj-10", 0 ]
+					"source" : [ "obj-10", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"order" : 1,
 					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -284,6 +307,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
@@ -399,8 +429,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"fontsize" : [ 12.059008 ],
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+					"fontsize" : [ 12.059008 ]
 				}
 ,
 				"parentstyle" : "",

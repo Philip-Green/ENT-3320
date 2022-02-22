@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 596.0, 117.0, 638.0, 378.0 ],
+		"rect" : [ 566.0, 211.0, 638.0, 378.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -126,7 +126,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 144.5, 89.571428571428569, 156.0, 48.0 ],
+					"patching_rect" : [ 167.5, 86.071428571428569, 156.0, 48.0 ],
 					"text" : "<= Lock patch (cmd. + E), double-click the rtcmix~ object to open & see script.",
 					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
 				}
@@ -141,7 +141,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 11.5, 9.0, 605.0, 29.0 ],
-					"text" : "1. \"Hello World!\" — A Single Note with the STRUM2 Instrument"
+					"text" : "2.3 Repeated Random Notes"
 				}
 
 			}
@@ -153,7 +153,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 144.5, 151.5, 156.0, 75.0 ],
+					"patching_rect" : [ 189.5, 138.5, 156.0, 75.0 ],
 					"text" : "Unlock patch (cmd. + E), then option-click on the rtcmix~ object for documentation (i.e. to see its .maxhelp file).",
 					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
 				}
@@ -247,17 +247,24 @@
 					"fontsize" : 28.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 42.5, 89.571428571428569, 100.0, 41.0 ],
-					"save" : [ "#N", "rtcmix~", 1, 0, ";", "#X", "restore", 0, 193, 193, "// STRUM2 Instrument Syntax:\r\n// STRUM2(outsk, dur, AMP, PITCH, squish, decay_time[, PAN])\n// source: http://rtcmix.org/reference/instruments/STRUM2.php\r\n\r\nSTRUM2(0, 3.5, 20000, 443.9, 2, 3.5)\n", ";" ],
-					"text" : "rtcmix~"
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "signal", "" ],
+					"patching_rect" : [ 42.5, 89.571428571428569, 123.0, 41.0 ],
+					"save" : [ "#N", "rtcmix~", 2, 0, ";", "#X", "restore", 0, 306, 306, " //source: http://rtcmix.org/reference/instruments/STRUM2.php\r\n//STRUM2(outsk, dur, AMP, PITCH, squish, decay_time[, PAN])\r\n//STRUM2 Instrument Syntax:\r\n\r\nstarttime=0\r\n\r\nfor (i=0; i<30; i=i+2){\r\n\tdillon= irand(250,600)\r\n\tSTRUM2(starttime, 5.0, 15000, dillon, 3, 4.5, random())\r\n\tstarttime=starttime+ 1.0\r\n}", ";" ],
+					"text" : "rtcmix~ 2"
 				}
 
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 1 ],
+					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-1", 0 ]
@@ -267,15 +274,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 1 ],
-					"order" : 0,
-					"source" : [ "obj-10", 0 ]
+					"source" : [ "obj-10", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"order" : 1,
 					"source" : [ "obj-10", 0 ]
 				}
 
@@ -399,8 +404,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"fontsize" : [ 12.059008 ],
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+					"fontsize" : [ 12.059008 ]
 				}
 ,
 				"parentstyle" : "",

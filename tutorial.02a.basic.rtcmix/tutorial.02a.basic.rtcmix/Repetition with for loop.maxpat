@@ -141,7 +141,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 11.5, 9.0, 605.0, 29.0 ],
-					"text" : "1. \"Hello World!\" — A Single Note with the STRUM2 Instrument"
+					"text" : "2.2 repetition with for loops"
 				}
 
 			}
@@ -399,8 +399,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"fontsize" : [ 12.059008 ],
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+					"fontsize" : [ 12.059008 ]
 				}
 ,
 				"parentstyle" : "",

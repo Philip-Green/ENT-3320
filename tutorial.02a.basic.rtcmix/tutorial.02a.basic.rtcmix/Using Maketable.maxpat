@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 596.0, 117.0, 638.0, 378.0 ],
+		"rect" : [ 675.0, 84.0, 570.0, 553.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 189.5, 238.0, 78.0, 20.0 ],
+					"patching_rect" : [ 180.5, 285.5, 78.0, 20.0 ],
 					"text" : "<live.gain~>",
 					"textcolor" : [ 0.870588, 0.415686, 0.062745, 1.0 ]
 				}
@@ -58,22 +58,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 11.5, 55.0, 30.0, 20.0 ],
+					"patching_rect" : [ 11.5, 76.071428571428555, 30.0, 20.0 ],
 					"text" : "<b>",
 					"textcolor" : [ 0.870588, 0.415686, 0.062745, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 2,
-					"id" : "obj-23",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 68.5, 55.0, 199.0, 20.0 ],
-					"text" : "<= bang to hear your beautiful note!",
-					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
 				}
 
 			}
@@ -120,20 +107,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontface" : 2,
-					"id" : "obj-17",
-					"linecount" : 3,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 144.5, 89.571428571428569, 156.0, 48.0 ],
-					"text" : "<= Lock patch (cmd. + E), double-click the rtcmix~ object to open & see script.",
-					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontface" : 3,
 					"fontsize" : 20.0,
 					"id" : "obj-13",
@@ -141,21 +114,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 11.5, 9.0, 605.0, 29.0 ],
-					"text" : "1. \"Hello World!\" — A Single Note with the STRUM2 Instrument"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 2,
-					"id" : "obj-11",
-					"linecount" : 5,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 144.5, 151.5, 156.0, 75.0 ],
-					"text" : "Unlock patch (cmd. + E), then option-click on the rtcmix~ object for documentation (i.e. to see its .maxhelp file).",
-					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+					"text" : "8. Sawtooth Waveform + Amplitude Envelope Control "
 				}
 
 			}
@@ -169,7 +128,7 @@
 					"orientation" : 1,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 42.5, 238.0, 136.0, 47.0 ],
+					"patching_rect" : [ 42.5, 264.0, 136.0, 47.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_linknames" : 1,
@@ -227,7 +186,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 42.5, 55.0, 24.0, 24.0 ]
+					"patching_rect" : [ 42.5, 76.071428571428555, 24.0, 24.0 ]
 				}
 
 			}
@@ -237,7 +196,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 42.5, 320.0, 45.0, 45.0 ]
+					"patching_rect" : [ 42.5, 366.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -247,17 +206,24 @@
 					"fontsize" : 28.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "" ],
-					"patching_rect" : [ 42.5, 89.571428571428569, 100.0, 41.0 ],
-					"save" : [ "#N", "rtcmix~", 1, 0, ";", "#X", "restore", 0, 193, 193, "// STRUM2 Instrument Syntax:\r\n// STRUM2(outsk, dur, AMP, PITCH, squish, decay_time[, PAN])\n// source: http://rtcmix.org/reference/instruments/STRUM2.php\r\n\r\nSTRUM2(0, 3.5, 20000, 443.9, 2, 3.5)\n", ";" ],
-					"text" : "rtcmix~"
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "signal", "" ],
+					"patching_rect" : [ 42.5, 195.571428571428555, 123.0, 41.0 ],
+					"save" : [ "#N", "rtcmix~", 2, 0, ";", "#X", "restore", 0, 187, 187, "  //source:http://rtcmix.org/reference/instruments/WAVETABLE.php\r\n //WAVETABLE(outsk, dur, AMP, PITCH[, PAN, WAVETABLE])\r\n//WAVETABLE Instrument Syntax:\r\n\r\nWAVETABLE(0,4.3,20000,8.02,0.5)", ";" ],
+					"text" : "rtcmix~ 2"
 				}
 
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 1 ],
+					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-1", 0 ]
@@ -267,15 +233,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 1 ],
-					"order" : 0,
-					"source" : [ "obj-10", 0 ]
+					"source" : [ "obj-10", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"order" : 1,
 					"source" : [ "obj-10", 0 ]
 				}
 
@@ -399,8 +363,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"fontsize" : [ 12.059008 ],
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+					"fontsize" : [ 12.059008 ]
 				}
 ,
 				"parentstyle" : "",
