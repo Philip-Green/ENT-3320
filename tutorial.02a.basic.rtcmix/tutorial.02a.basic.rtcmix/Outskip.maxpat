@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 701.0, 113.0, 570.0, 553.0 ],
+		"rect" : [ 34.0, 77.0, 1213.0, 562.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -248,7 +248,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 42.5, 195.571428571428555, 123.0, 41.0 ],
-					"save" : [ "#N", "rtcmix~", 2, 0, ";", "#X", "restore", 0, 159, 159, "  //\r\n //\r\n//\r\n\r\nrtinput(\"C:\\Users\\kingk\\OneDrive\\Documents\\test.samples\\clarinet/clarinette-B2.aif\")\r\nSTEREO(outsk=0.0, insk=0.0, dur=3.00, amp=1.0, 1.0, 0.0)", ";" ],
+					"save" : [ "#N", "rtcmix~", 2, 0, ";", "#X", "restore", 0, 232, 232, "  //\r\n //\r\n//\r\n\r\nrtinput(\"C:\\Users\\kingk\\OneDrive\\Documents\\test.samples\\stereo-test.aif\")\r\nSTEREO(outsk=1.55, insk=1.55, dur=1.45, amp=1.0, 1.0, -1.0)//L channel\r\nSTEREO(outsk=0.0, insk=0.0, dur=3.00, amp=1.0, -1.0, 0.0)//R channel", ";" ],
 					"text" : "rtcmix~ 2"
 				}
 

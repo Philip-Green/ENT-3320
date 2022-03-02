@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 669.0, 84.0, 570.0, 553.0 ],
+		"rect" : [ 34.0, 77.0, 1213.0, 562.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -59,7 +59,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 239.0, 146.071428571428555, 78.0, 36.0 ],
+					"patching_rect" : [ 239.0, 157.071428571428555, 78.0, 36.0 ],
 					"text" : ";\r\ndsp sr 44100"
 				}
 
